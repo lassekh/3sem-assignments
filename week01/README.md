@@ -2,9 +2,9 @@
 
 ## Overview
 
-Navn: Lasse Kjær Hauerberg
-Mail: cph-lh225@cphbusiness.dk
-Link to assigment description: https://github.com/dat3Cph/material/blob/sem2024spring/flowJavaDD/javaDD/ClassExercises.md
+Navn: Lasse Kjær Hauerberg<br>
+Mail: cph-lh225@cphbusiness.dk<br>
+Link to assigment description: https://github.com/dat3Cph/material/blob/sem2024spring/flowJavaDD/javaDD/ClassExercises.md<br>
 
 All solutions are made en one project. Each task solution in the assignment is divided into separate packages.
 
