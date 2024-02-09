@@ -1,9 +1,14 @@
 package org.app.json.task3;
 
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
 public class Customer {
-    String firstName;
-    String lastName;
-    String birthDate;
-    Address address;
-    Account account;
+    private String firstName;
+    private String lastName;
+    private String birthDate;
+    private Address address;
+    private Account account;
 }

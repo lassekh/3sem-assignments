@@ -2,20 +2,23 @@
 
 ## Overview
 
-- Your name
-- which assignment are included
-- which one are completed and which one are not
+- Name: Lasse Kjær Hauerberg
+- Mail: cph-lh225@cphbusiness.dk
+
+### JSON exercise
+Link to exercise: https://github.com/dat3Cph/material/blob/sem2024spring/flowJavaDD/JsonAndDTOsThreads/JsonExercise.md
+
+Solutions can be found in package 'json' where each task has a package with solutions.
+
+### API exercise
+Link to exercise: https://github.com/dat3Cph/material/blob/sem2024spring/flowJavaDD/JsonAndDTOsThreads/APIExercise.md
+
+Solutions can be found en package 'api' where all solutions are in one class: APIExercise. Except for the solution to testing which can be found in the 'test' directory.
+
+### Thread exercise
+Link to exercise: https://github.com/dat3Cph/material/blob/sem2024spring/flowJavaDD/JsonAndDTOsThreads/exercise_threads.md
+
+Solutions can be found en package 'tread' where each task has a package with solutions.
 
 ## Friday presentation
-- add the friday presentation into the weekly folder
-
-
-JSON stands for JavaScript Object Notation.
-
-JSON follows JavaScript Object syntax and XML follows HTML syntax with nested elements. JSON is shorter, quicker to read and write, can use arrays and does not have end tags. Biggest difference is how you parse it.
-
-JSON is used for storing and transporting data in a simple and readable way.
-
-Data types: String, number, Object, array, boolean and null.
-
-Data are always in name:value pairs. Data must be seperated by commas. Object are in curly brackets and arrays are in square brackets.
+- Presented about DTOs and how to use them

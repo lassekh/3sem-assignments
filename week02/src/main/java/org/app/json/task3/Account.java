@@ -1,7 +1,12 @@
 package org.app.json.task3;
 
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
 public class Account {
-    String id;
-    String balance;
-    boolean isActive;
+    private String id;
+    private String balance;
+    private boolean isActive;
 }
