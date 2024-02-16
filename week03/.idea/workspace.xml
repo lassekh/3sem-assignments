@@ -19,15 +19,17 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task1/UnicornExercise.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task2/JPALifecycleAnnotations.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task2/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task4/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task4/PointDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task4/PointsExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task5/LombokExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task6/StudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task8/GLSDelivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task8/Package.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task8/PackageDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/task4/PointDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task3/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task3/PointDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task3/PointsExercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task4/LombokExercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task5/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task5/DAOExercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task5/StudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task6/GLSDelivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task6/Package.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/task6/PackageDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/task3/PointDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +41,15 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -54,26 +60,26 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -82,7 +88,20 @@
       <recent name="org.example.task4" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PointDAOTest.getAllPoints">
+  <component name="RunManager" selected="Application.DAOExercise">
+    <configuration name="DAOExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.task5.DAOExercise" />
+      <module name="week03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.task5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JPALifecycleAnnotations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.task2.JPALifecycleAnnotations" />
       <module name="week03" />
@@ -96,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PointsExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.task4.PointsExercise" />
+    <configuration name="UnicornExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.task1.UnicornExercise" />
       <module name="week03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.task4.*" />
+          <option name="PATTERN" value="org.example.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,12 +132,12 @@
       <module name="week03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.task4.*" />
+          <option name="PATTERN" value="org.example.task3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.task4" />
-      <option name="MAIN_CLASS_NAME" value="org.example.task4.PointDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.task3.PointDAOTest" />
       <option name="METHOD_NAME" value="getAllPoints" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -129,29 +148,13 @@
       <module name="week03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.task4.*" />
+          <option name="PATTERN" value="org.example.task3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.task4" />
-      <option name="MAIN_CLASS_NAME" value="org.example.task4.PointDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.task3.PointDAOTest" />
       <option name="METHOD_NAME" value="getAvgXValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PointDAOTest.getTotalPoints" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="week03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.task4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.task4" />
-      <option name="MAIN_CLASS_NAME" value="org.example.task4.PointDAOTest" />
-      <option name="METHOD_NAME" value="getTotalPoints" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DAOExercise" />
+        <item itemvalue="Application.UnicornExercise" />
+        <item itemvalue="Application.JPALifecycleAnnotations" />
         <item itemvalue="JUnit.PointDAOTest.getAllPoints" />
         <item itemvalue="JUnit.PointDAOTest.getAvgXValue" />
-        <item itemvalue="JUnit.PointDAOTest.getTotalPoints" />
-        <item itemvalue="Application.PointsExercise" />
-        <item itemvalue="Application.JPALifecycleAnnotations" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +181,8 @@
       <workItem from="1707131928053" duration="9000" />
       <workItem from="1707733960546" duration="3769000" />
       <workItem from="1707915546377" duration="6360000" />
-      <workItem from="1707999087048" duration="6479000" />
+      <workItem from="1707999087048" duration="9002000" />
+      <workItem from="1708069289904" duration="5244000" />
     </task>
     <servers />
   </component>

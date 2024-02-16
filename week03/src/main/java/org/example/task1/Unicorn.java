@@ -1,17 +1,19 @@
 package org.example.task1;
 
 import jakarta.persistence.*;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 @Table(name = "unicorn")
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
+@Setter
 public class Unicorn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, unique = true)
+    @Setter(AccessLevel.PRIVATE)
     private int id;
     @Column(name = "name", nullable = false)
     private String name;

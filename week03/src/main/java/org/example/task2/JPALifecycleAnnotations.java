@@ -12,16 +12,19 @@ public class JPALifecycleAnnotations {
     private static EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
     public static void main(String[] args) {
 
-        Student student = new Student("Lasse","Kjær","lasses@email.dk",31);
+        Student student = new Student("Lars","Abild","ladad@email.dk",30);
         createStudent(student);
 
         //Find student with id = 1 in DB - and print
-        System.out.println(readStudent(1));
+        Student lasse = readStudent(2);
+        System.out.println(lasse);
 
-        //Update student with by object
-        Student updatedStudent = new Student("Lasse","Hauerberg","lassesemail.com",31);
-        updateStudent(updatedStudent);
+        //Update student lasse
+        lasse.setAge(32);
+        lasse = updateStudent(lasse);
+        System.out.println(lasse.getAge());
 
+        //delete student by id
         //deleteStudent(1);
 
 
@@ -40,6 +43,7 @@ public class JPALifecycleAnnotations {
     //This method should read a student from the database using the student's id.
     public static Student readStudent(int id){
         try(EntityManager em = emf.createEntityManager()) {
+
             return em.find(Student.class, id);
         }
     }
@@ -48,7 +52,7 @@ public class JPALifecycleAnnotations {
         //updStd is in transient state
         try(EntityManager em = emf.createEntityManager()){
             em.getTransaction().begin();
-            //updStd is in managed state
+            //updStd is in managed state, new object is managed
             Student s = em.merge(updStd);
             em.getTransaction().commit();
             //updStd is in detached state

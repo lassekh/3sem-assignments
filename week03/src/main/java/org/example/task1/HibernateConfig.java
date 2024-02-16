@@ -4,7 +4,7 @@ import jakarta.persistence.EntityManagerFactory;
 import lombok.NoArgsConstructor;
 import org.example.class_exercises.Employee;
 import org.example.task2.Student;
-import org.example.task4.Point;
+import org.example.task3.Point;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -63,6 +63,7 @@ public class HibernateConfig {
         configuration.addAnnotatedClass(Employee.class);
         configuration.addAnnotatedClass(Student.class);
         configuration.addAnnotatedClass(Point.class);
+        configuration.addAnnotatedClass(Package.class);
     }
 
     public static EntityManagerFactory getEntityManagerFactoryConfig() {
