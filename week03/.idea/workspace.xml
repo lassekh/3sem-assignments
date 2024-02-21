@@ -88,7 +88,7 @@
       <recent name="org.example.task4" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DAOExercise">
+  <component name="RunManager" selected="JUnit.PointDAOTest.getTotalPoints">
     <configuration name="DAOExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.task5.DAOExercise" />
       <module name="week03" />
@@ -144,7 +144,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PointDAOTest.getAvgXValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PointDAOTest.getTotalPoints" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="week03" />
       <extension name="coverage">
         <pattern>
@@ -152,9 +152,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.task4" />
+      <option name="PACKAGE_NAME" value="org.example.task3" />
       <option name="MAIN_CLASS_NAME" value="org.example.task3.PointDAOTest" />
-      <option name="METHOD_NAME" value="getAvgXValue" />
+      <option name="METHOD_NAME" value="getTotalPoints" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PointDAOTest.getTotalPoints" />
         <item itemvalue="Application.DAOExercise" />
         <item itemvalue="Application.UnicornExercise" />
         <item itemvalue="Application.JPALifecycleAnnotations" />
         <item itemvalue="JUnit.PointDAOTest.getAllPoints" />
-        <item itemvalue="JUnit.PointDAOTest.getAvgXValue" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +182,9 @@
       <workItem from="1707733960546" duration="3769000" />
       <workItem from="1707915546377" duration="6360000" />
       <workItem from="1707999087048" duration="9002000" />
-      <workItem from="1708069289904" duration="5244000" />
+      <workItem from="1708069289904" duration="6002000" />
+      <workItem from="1708280926221" duration="88000" />
+      <workItem from="1708281232406" duration="2389000" />
     </task>
     <servers />
   </component>

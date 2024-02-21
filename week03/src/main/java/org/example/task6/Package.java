@@ -37,6 +37,6 @@ public class Package {
     }
     @PreUpdate
     public void timeUpdated(){
-        this.createdTime = LocalDateTime.now();
+        this.updatedTime = LocalDateTime.now();
     }
 }
