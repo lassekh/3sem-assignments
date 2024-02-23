@@ -3,6 +3,7 @@ package org.jpa.task4;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.TypedQuery;
 
 public class PackageDAO {
     EntityManagerFactory emf;
@@ -25,7 +26,9 @@ public class PackageDAO {
     {
         try(EntityManager em = emf.createEntityManager())
         {
-            return em.find(Package.class,trackingNum);
+            TypedQuery<Package> query = em.createQuery("select p from Package p where trackingNumber = ?1",Package.class);
+            query.setParameter(1,trackingNum);
+            return query.getSingleResult();
         }
     }
 
@@ -45,7 +48,9 @@ public class PackageDAO {
     {
         try(EntityManager em = emf.createEntityManager())
         {
+            em.getTransaction().begin();
             em.remove(p);
+            em.getTransaction().commit();
         }
     }
 }

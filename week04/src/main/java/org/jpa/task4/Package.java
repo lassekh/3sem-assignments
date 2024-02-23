@@ -2,7 +2,6 @@ package org.jpa.task4;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.jpa.task1.Fee;
 
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -32,6 +31,7 @@ public class Package {
     @Column(name = "updated_at")
     private LocalDateTime updatedTime;
     @OneToMany(mappedBy = "aPackage",cascade = CascadeType.PERSIST)
+    @ToString.Exclude
     private Set<Shipment> shipments;
 
     public Package(String trackingNumber, String senderName, String receiverName) {
@@ -54,13 +54,13 @@ public class Package {
         }
     }
     @PrePersist
-    public void timeCreated(){
+    public void onCreate(){
         this.createdTime = LocalDateTime.now();
         this.updatedTime = LocalDateTime.now();
         this.deliveryStatus = Status.PENDING;
     }
     @PreUpdate
-    public void timeUpdated(){
+    public void onUpdate(){
         this.updatedTime = LocalDateTime.now();
     }
 }
