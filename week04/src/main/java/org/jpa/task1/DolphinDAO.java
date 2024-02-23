@@ -9,10 +9,18 @@ import java.util.List;
 import java.util.Set;
 
 public class DolphinDAO {
-    private EntityManagerFactory emf;
-    public DolphinDAO(EntityManagerFactory emf)
+    private static EntityManagerFactory emf;
+    private static DolphinDAO instance;
+    //singleton
+
+    public static DolphinDAO getInstance(EntityManagerFactory _emf)
     {
-        this.emf = emf;
+        if(instance == null)
+        {
+            emf = _emf;
+            instance = new DolphinDAO();
+        }
+        return instance;
     }
 
     public void create(Person person)

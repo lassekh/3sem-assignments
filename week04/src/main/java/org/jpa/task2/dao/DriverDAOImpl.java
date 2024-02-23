@@ -13,12 +13,11 @@ import java.util.List;
 
 public class DriverDAOImpl implements IDriverDAO{
     EntityManagerFactory emf;
-
     public DriverDAOImpl(EntityManagerFactory emf)
     {
         this.emf = emf;
     }
-
+    @Override
     public String saveDriver(String name, String surname, BigDecimal salary)
     {
         try(EntityManager em = emf.createEntityManager())
@@ -29,6 +28,7 @@ public class DriverDAOImpl implements IDriverDAO{
             return "Driver with " + name + " persisted";
         }
     }
+    @Override
     public Driver getDriverById(String id)
     {
         try(EntityManager em = emf.createEntityManager())
@@ -36,6 +36,7 @@ public class DriverDAOImpl implements IDriverDAO{
             return em.find(Driver.class,id);
         }
     }
+    @Override
     public Driver updateDriver(Driver driver)
     {
         try(EntityManager em = emf.createEntityManager())
@@ -46,15 +47,18 @@ public class DriverDAOImpl implements IDriverDAO{
             return updDriver;
         }
     }
+    @Override
     public void deleteDriver(String id)
     {
         try(EntityManager em = emf.createEntityManager())
         {
             em.getTransaction().begin();
+            Driver driverToDelete = getDriverById(id);
             em.remove(id);
             em.getTransaction().commit();
         }
     }
+    @Override
     public List<Driver> findAllDriversEmployedAtTheSameYear(String year)
     {
         try(EntityManager em = emf.createEntityManager())
@@ -67,6 +71,7 @@ public class DriverDAOImpl implements IDriverDAO{
             return q2.getResultList();
         }
     }
+    @Override
     public List<Driver> fetchAllDriversWithSalaryGreaterThan10000()
     {
         try(EntityManager em = emf.createEntityManager())
@@ -75,13 +80,16 @@ public class DriverDAOImpl implements IDriverDAO{
             return query.getResultList();
         }
     }
+    @Override
     public double fetchHighestSalary()
     {
         try(EntityManager em = emf.createEntityManager())
         {
-            return (double) em.createQuery("select MAX(d.salary) from Driver d").getSingleResult();
+            TypedQuery<BigDecimal> query = em.createQuery("select MAX(d.salary) from Driver d", BigDecimal.class);
+            return query.getSingleResult().doubleValue();
         }
     }
+    @Override
     public List<String> fetchFirstNameOfAllDrivers()
     {
         try(EntityManager em = emf.createEntityManager())
@@ -89,6 +97,7 @@ public class DriverDAOImpl implements IDriverDAO{
             return em.createQuery("select d.name from Driver d",String.class).getResultList();
         }
     }
+    @Override
     public long calculateNumberOfDrivers()
     {
         try(EntityManager em = emf.createEntityManager())
@@ -96,11 +105,13 @@ public class DriverDAOImpl implements IDriverDAO{
             return (long) em.createQuery("select count(d) from Driver d").getSingleResult();
         }
     }
+    @Override
+    //Method only works if only one driver has the highest salary - else it has to return Driver[] to work correctly
     public Driver fetchDriverWithHighestSalary()
     {
         try(EntityManager em = emf.createEntityManager())
         {
-            return em.createQuery("select d, max(d.salary) from Driver d",Driver.class).getSingleResult();
+            return em.createQuery("select d, MAX(d.salary) from Driver d",Driver.class).getResultList().get(0);
         }
     }
 }

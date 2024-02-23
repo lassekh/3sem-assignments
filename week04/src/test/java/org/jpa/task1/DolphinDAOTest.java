@@ -3,19 +3,24 @@ package org.jpa.task1;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import org.jpa.HibernateConfig;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DolphinDAOTest {
-    EntityManagerFactory emf;
-    DolphinDAO dao;
+    static private EntityManagerFactory emf;
+    static private DolphinDAO dao;
+    @BeforeAll
+    static void setUpAll() {
+        emf = HibernateConfig.getEntityManagerFactoryForTesting();
+        dao = new DolphinDAO();
+    }
     @BeforeEach
     void setUp() {
-        emf = HibernateConfig.getEntityManagerFactoryForTesting();
-        dao = new DolphinDAO(emf);
+        //delete all rows
+        //insert test data
+        //do something with ids
+
     }
 
     @AfterEach
@@ -24,10 +29,16 @@ class DolphinDAOTest {
     }
 
     @Test
+    @DisplayName("insert name")
     void create() {
+        //given
+        //when
+        //then
+        //use variables 'expected' and 'actual'
+
         Person person = new Person("Tesla");
         dao.create(person);
-        //how?
+        //use .find() from JPA
 
     }
 

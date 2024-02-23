@@ -6,6 +6,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
+import org.jpa.class_exercise.Car;
+import org.jpa.class_exercise.Company;
+import org.jpa.class_exercise.Course;
+import org.jpa.class_exercise.Student;
 import org.jpa.task1.Fee;
 import org.jpa.task1.Note;
 import org.jpa.task1.Person;
@@ -80,10 +84,14 @@ public class HibernateConfig {
 
     private static void getAnnotationConfiguration(Configuration configuration) {
         // add annotated classes
-        configuration.addAnnotatedClass(Person.class);
-        configuration.addAnnotatedClass(PersonalDetails.class);
-        configuration.addAnnotatedClass(Fee.class);
-        configuration.addAnnotatedClass(Note.class);
+        //configuration.addAnnotatedClass(Person.class);
+        //configuration.addAnnotatedClass(PersonalDetails.class);
+        //configuration.addAnnotatedClass(Fee.class);
+        //configuration.addAnnotatedClass(Note.class);
+        configuration.addAnnotatedClass(Car.class);
+        configuration.addAnnotatedClass(Company.class);
+        configuration.addAnnotatedClass(Student.class);
+        configuration.addAnnotatedClass(Course.class);
     }
 
     public static EntityManagerFactory getEntityManagerFactoryConfig(String name) {

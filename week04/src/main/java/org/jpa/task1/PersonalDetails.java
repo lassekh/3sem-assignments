@@ -1,9 +1,6 @@
 package org.jpa.task1;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.MapsId;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,6 +13,7 @@ import lombok.ToString;
 @ToString(exclude = "person")
 public class PersonalDetails {
     @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String address;
     private int zip;

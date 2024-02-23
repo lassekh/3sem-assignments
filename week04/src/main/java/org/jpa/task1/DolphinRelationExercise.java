@@ -2,7 +2,7 @@ package org.jpa.task1;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import org.jpa.HibernateConfig;
+import org.jpa.task1.HibernateConfig;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -28,7 +28,7 @@ public class DolphinRelationExercise {
         lasse.addNote(note1);
         lasse.addNote(note2);
 
-        DolphinDAO dao = new DolphinDAO(emf);
+        DolphinDAO dao = DolphinDAO.getInstance(emf);
         dao.create(lasse);
         lasse.getPersonalDetails().setAge(40);
         dao.update(lasse);
