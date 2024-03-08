@@ -1,0 +1,8 @@
+GET http://localhost:7070/api/vet/patients
+###
+GET http://localhost:7070/api/vet/appointments
+###
+GET http://localhost:7070/api/vet/patient/1
+###
+GET http://localhost:7070/api/vet/appointment/1
+###

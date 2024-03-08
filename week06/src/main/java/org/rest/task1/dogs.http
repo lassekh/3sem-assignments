@@ -1,0 +1,12 @@
+GET http://localhost:7008/dogs
+###
+POST http://localhost:7008/dog
+Content-Type: application/json
+
+{
+"name": "Hans",
+"race": "Labrador",
+"age": 2
+}
+###
+GET http://localhost:7008/dog/6
