@@ -1,0 +1,30 @@
+GET http://localhost:7070/api/hotel/1
+###
+GET http://localhost:7070/api/hotel
+###
+GET http://localhost:7070/api/hotel/3/rooms
+###
+POST http://localhost:7070/api/hotel
+
+{
+"name":"Leonora Hotel",
+"address":"Sommervej 14"
+}
+###
+PUT http://localhost:7070/api/hotel/5
+
+{
+"address":"Forårsvej 14"
+}
+###
+DELETE http://localhost:7070/api/hotel/1
+###
+POST http://localhost:7070/api/auth/login
+
+{
+"username":"test",
+"password":"test"
+}
+###
+GET http://localhost:7070/api/protected/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJ0ZXN0IiwiZXhwIjoxNzExMDI0MDczLCJyb2xlcyI6InVzZXIiLCJ1c2VybmFtZSI6InRlc3QifQ.q4vbE7jC_8u7dGRKdaXE8Yw4qA47T0_yGOAkOLWQDbk

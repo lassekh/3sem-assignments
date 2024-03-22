@@ -1,26 +1,22 @@
 package org.rest.task3.config;
 
-import entities.Account;
-import entities.AccountDetail;
-import entities.City;
-import entities.Hobby;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.NoArgsConstructor;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-import org.rest.task3.Hotel;
-import org.rest.task3.Room;
+import org.rest.task3.entities.Hotel;
+import org.rest.task3.entities.Role;
+import org.rest.task3.entities.Room;
+import org.rest.task3.entities.User;
 
 
 import java.util.Properties;
 
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class HibernateConfig {
-
     private static EntityManagerFactory entityManagerFactory;
-
     private static EntityManagerFactory buildEntityFactoryConfig() {
         try {
             Configuration configuration = new Configuration();
@@ -83,6 +79,8 @@ public class HibernateConfig {
         //configuration.addAnnotatedClass(example.class);
         configuration.addAnnotatedClass(Hotel.class);
         configuration.addAnnotatedClass(Room.class);
+        configuration.addAnnotatedClass(User.class);
+        configuration.addAnnotatedClass(Role.class);
     }
 
     public static EntityManagerFactory getEntityManagerFactoryConfig() {

@@ -17,6 +17,7 @@
         <restassured.version>5.3.2</restassured.version>
         <testcontainers.version>1.19.5</testcontainers.version>
         <junit.version>5.9.1</junit.version>
+        <jbcrypt.version>0.4</jbcrypt.version>
     </properties>
 
     <dependencies>
@@ -119,6 +120,16 @@
             <artifactId>junit-jupiter</artifactId>
             <version>${testcontainers.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>${jbcrypt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+            <version>9.10</version>
         </dependency>
     </dependencies>
 
