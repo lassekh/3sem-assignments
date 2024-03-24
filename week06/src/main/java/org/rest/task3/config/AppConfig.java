@@ -1,6 +1,7 @@
 package org.rest.task3.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.javalin.Javalin;
 import io.javalin.apibuilder.EndpointGroup;
 import io.javalin.http.HttpStatus;
@@ -68,6 +69,21 @@ public class AppConfig {
                     throw new APIException(HttpStatus.FORBIDDEN.getCode(), "Unauthorized with roles: "+allowedRoles);
             });
         });
+        return instance;
+    }
+    public AppConfig exceptionHandling()
+    {
+        app.exception(Exception.class, (e,ctx) -> {
+            if(e.getClass() != IllegalStateException.class)
+            {
+                ObjectNode node = om.createObjectNode().put("errorMessage", e.getMessage());
+                ctx.status(500).json(node);
+            } else
+            {
+                ctx.status(400).result("400 - Bad request");
+            }
+        });
+        app.error(404, ctx -> ctx.status(404).result("404 - Not found"));
         return instance;
     }
 }
